@@ -51,12 +51,12 @@ const Header = () => {
               <a className='navbar-brand' href='#'>
                 <div className='header-logo-img'>Paizar</div>
               </a>
-              {/* <div className='header-input'>
+              <div className='header-input'>
                 <input type='search' placeholder='Search courses..' />
                 <span>
                   <i className='fa-regular fa-magnifying-glass' />
                 </span>
-              </div> */}
+              </div>
             </div>
             <button
               className='navbar-toggler'
