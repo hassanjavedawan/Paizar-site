@@ -98,7 +98,45 @@ body {
     color: #979595 !important;
   }
 }
+marquee {
+  font-size: 14px;
+}
+.categori .nav {
+  flex-wrap: nowrap !important;
+}
+.nav-tabs {
+  border-bottom: 0px !important;
+  margin: auto;
+  width: 30% !important;
+  .nav-item {
+    .nav-link {
+      margin: 8px !important;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 170%;
+      text-align: center;
+      letter-spacing: 0.008em;
+      color: #777373 !important;
+      border: 0 !important;
+    }
+    &:focus {
+      outline: none !important;
+    }
+  }
+}
 
+.nav-tabs .nav-item:hover .nav-link  {
+  transition: all 0.4s !important;
+  border-bottom: 3.5px solid #ea5252 !important;
+
+}
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  border-bottom: 3.5px solid #df6724 !important ;
+  color: #df6724 !important;
+  font-weight: 600 !important;
+}
 // ======================°°°°°°°°°°°°°°°°°°°°°°°=========================
 //                             footer
 // ======================°°°°°°°°°°°°°°°°°°°°°°°=========================
@@ -771,7 +809,7 @@ span.slider-btn {
 
   .menu {
     list-style-type: none;
-  
+
     text-align: center;
   }
 
@@ -805,7 +843,7 @@ span.slider-btn {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   .course-btn::after {
     content: "";
     position: absolute;
@@ -818,11 +856,11 @@ span.slider-btn {
     z-index: -1;
     transition: all 0.4s;
   }
-  
+
   .course-btn:hover:after {
     width: 100%;
   }
-  
+
   .textThere {
     height: 50px;
     text-align: center;
@@ -1582,6 +1620,9 @@ footer {
 }
 
 @media only screen and (max-width: 600px) {
+  .nav-tabs {
+    width: 100% !important;
+  }
   .course-2-left {
     width: 95%;
     margin: auto;

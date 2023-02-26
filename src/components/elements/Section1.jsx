@@ -1,8 +1,16 @@
 /** @format */
 
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../../redux/reducers";
 
 const Section1 = () => {
+  const dispatch = useDispatch();
+  const addToCart = payload => {
+    console.log(payload);
+    dispatch(addItem(payload));
+  };
+
   return (
     <div className='container-fluid mt-5'>
       <div className='row m-auto'>
@@ -19,9 +27,11 @@ const Section1 = () => {
                 which fits with your dress.
               </p>
               <div className='price'>Rs3,903</div>
-              <a href='#' className='add-to-cart'>
+              <button
+                onClick={() => addToCart({ id: 1, type: "girl" })}
+                className='add-to-cart'>
                 Add to Cart
-              </a>
+              </button>
             </figcaption>
           </figure>{" "}
         </div>
@@ -38,9 +48,11 @@ const Section1 = () => {
                 seconds, then it's probably not worth knowing anyway.{" "}
               </p>
               <div className='price'>$195.00 </div>
-              <a href='#' className='add-to-cart'>
+              <button
+                onClick={() => addToCart({ id: 2, type: "Kids" })}
+                className='add-to-cart'>
                 Add to Cart
-              </a>
+              </button>
             </figcaption>
           </figure>
         </div>
@@ -57,9 +69,11 @@ const Section1 = () => {
                 we couldn't react to a lot of life.{" "}
               </p>
               <div className='price'>$95.00</div>
-              <a href='#' className='add-to-cart'>
+              <button
+                onClick={() => addToCart({ id: 3, type: "Man" })}
+                className='add-to-cart'>
                 Add to Cart
-              </a>
+              </button>
             </figcaption>
           </figure>
         </div>
@@ -70,15 +84,17 @@ const Section1 = () => {
               alt='sample77'
             />
             <figcaption>
-              <h2>Man </h2>
+              <h2>Man old</h2>
               <p>
                 I suppose if we couldn't laugh at things that don't make sense,
                 we couldn't react to a lot of life.{" "}
               </p>
               <div className='price'>$95.00</div>
-              <a href='#' className='add-to-cart'>
+              <button
+                onClick={() => addToCart({ id: 4, type: "Man old" })}
+                className='add-to-cart'>
                 Add to Cart
-              </a>
+              </button>
             </figcaption>
           </figure>
         </div>

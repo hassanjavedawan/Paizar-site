@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import { BsEye, BsHeartFill, BsStarFill, BsStarHalf } from "react-icons/bs";
 import Modal from "react-bootstrap/Modal";
-import bestSeller from "../../data/bestSeller.json";
+import { man, woman, kids, Wedding } from "../../data/bestSeller";
+import { Tabs, Tab } from "react-bootstrap";
 
 const Section2 = () => {
   const [select, setSelect] = useState();
@@ -19,43 +20,180 @@ const Section2 = () => {
         <h2 className='title_1'>
           <span>Best seller products</span>
         </h2>
-        <div className='custom-container-2 mt-5'>
-          <div className='categori-item '>
-            <div className='row g-3'>
-              {bestSeller.map((data, id) => {
-                return (
-                  <div className='col-lg-3 col-md-3 col-6' key={id}>
-                    <div className='categori-card card1'>
-                      <img className='w-100' src={data.imgUrl} alt='' />
-                      <div className='go-corner' href='#'>
-                        <div className='go-arrow'>
-                          <BsHeartFill />
-                        </div>
-                      </div>
-                      <div className='categori-card-body'>
-                        <div className='wrappers'>
-                          <div
-                            className='btns m-auto'
-                            onClick={() => {
-                              setSelect(data);
-                              handleShow();
-                            }}>
-                            <div className='side default-side'>Quick View</div>
-                            <div className='side hover-side'>
-                              <BsEye size={22} />
+        <div className='row m-auto text-center'>
+          <Tabs
+            defaultActiveKey='Man'
+            id='uncontrolled-tab-example'
+            className=' col-12 '>
+            <Tab eventKey='Man' title='Man'>
+              <div className='custom-container-2 mt-5'>
+                <div className='categori-item '>
+                  <div className='row g-3'>
+                    {man.map((data, id) => {
+                      return (
+                        <div className='col-lg-3 col-md-3 col-6' key={id}>
+                          <div className='categori-card card1'>
+                            <img className='w-100' src={data.imgUrl} alt='' />
+                            <div className='go-corner' href='#'>
+                              <div className='go-arrow'>
+                                <BsHeartFill />
+                              </div>
+                            </div>
+                            <div className='categori-card-body'>
+                              <div className='wrappers'>
+                                <div
+                                  className='btns m-auto'
+                                  onClick={() => {
+                                    setSelect(data);
+                                    handleShow();
+                                  }}>
+                                  <div className='side default-side'>
+                                    Quick View
+                                  </div>
+                                  <div className='side hover-side'>
+                                    <BsEye size={22} />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <br />
+                              <br />
                             </div>
                           </div>
                         </div>
-
-                        <br />
-                        <br />
-                      </div>
-                    </div>
+                      );
+                    })}
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab eventKey='Woman' title='Woman'>
+              <div className='custom-container-2 mt-5'>
+                <div className='categori-item '>
+                  <div className='row g-3'>
+                    {woman.map((data, id) => {
+                      return (
+                        <div className='col-lg-3 col-md-3 col-6' key={id}>
+                          <div className='categori-card card1'>
+                            <img className='w-100' src={data.imgUrl} alt='' />
+                            <div className='go-corner' href='#'>
+                              <div className='go-arrow'>
+                                <BsHeartFill />
+                              </div>
+                            </div>
+                            <div className='categori-card-body'>
+                              <div className='wrappers'>
+                                <div
+                                  className='btns m-auto'
+                                  onClick={() => {
+                                    setSelect(data);
+                                    handleShow();
+                                  }}>
+                                  <div className='side default-side'>
+                                    Quick View
+                                  </div>
+                                  <div className='side hover-side'>
+                                    <BsEye size={22} />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab eventKey='Kids' title='Kids'>
+              <div className='custom-container-2 mt-5'>
+                <div className='categori-item '>
+                  <div className='row g-3'>
+                    {kids.map((data, id) => {
+                      return (
+                        <div className='col-lg-3 col-md-3 col-6' key={id}>
+                          <div className='categori-card card1'>
+                            <img className='w-100' src={data.imgUrl} alt='' />
+                            <div className='go-corner' href='#'>
+                              <div className='go-arrow'>
+                                <BsHeartFill />
+                              </div>
+                            </div>
+                            <div className='categori-card-body'>
+                              <div className='wrappers'>
+                                <div
+                                  className='btns m-auto'
+                                  onClick={() => {
+                                    setSelect(data);
+                                    handleShow();
+                                  }}>
+                                  <div className='side default-side'>
+                                    Quick View
+                                  </div>
+                                  <div className='side hover-side'>
+                                    <BsEye size={22} />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </Tab>
+            <Tab eventKey='Wedding Collection' title='Wedding Collection'>
+              <div className='custom-container-2 mt-5'>
+                <div className='categori-item '>
+                  <div className='row g-3'>
+                    {Wedding.map((data, id) => {
+                      return (
+                        <div className='col-lg-3 col-md-3 col-6' key={id}>
+                          <div className='categori-card card1'>
+                            <img className='w-100' src={data.imgUrl} alt='' />
+                            <div className='go-corner' href='#'>
+                              <div className='go-arrow'>
+                                <BsHeartFill />
+                              </div>
+                            </div>
+                            <div className='categori-card-body'>
+                              <div className='wrappers'>
+                                <div
+                                  className='btns m-auto'
+                                  onClick={() => {
+                                    setSelect(data);
+                                    handleShow();
+                                  }}>
+                                  <div className='side default-side'>
+                                    Quick View
+                                  </div>
+                                  <div className='side hover-side'>
+                                    <BsEye size={22} />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <br />
+                              <br />
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            </Tab>
+          </Tabs>
         </div>
       </section>
       <Modal show={show} centered onHide={handleClose}>
